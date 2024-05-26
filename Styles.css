@@ -18,7 +18,6 @@ body {
 }
 
 .maindisplay {
-    scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
     width: 100vw;
