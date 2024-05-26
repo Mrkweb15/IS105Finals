@@ -16,7 +16,7 @@
                     <li><a href="#home" onClick="toggleNav()">Home</a></li>
                     <li><a href="#features" onClick="toggleNav()">Features</a></li>
                     <li><a href="#products" onClick="toggleNav()">Products</a></li>
-                    <li><a href="#aboutus" onClick="toggleNav()">About</a></li>
+                    <li><a href="#aboutus" onClick="toggleNav()">about</a></li>
                     <li><a href="#contact" onClick="toggleNav()">Contact</a></li>
                 </ul>
             </nav>
@@ -150,18 +150,60 @@
                     </div>
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
-                        <span>mrkesquivel17@gmail.com</span>
+                        <span>kalabasafloat@gmail.com</span>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" id="sendMessage">Send Message</button>
                 </form>
             </div>
         </section>
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get form data
+            const formData = new FormData(event.target);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+
+            // Send email using SendGrid API
+            axios.post('https://api.sendgrid.com/v3/mail/send', {
+                personalizations: [{
+                    to: [{ email: 'kalabasafloat@gmail.com' }],
+                    subject: 'Message from your website',
+                }],
+                from: { email: email, name: name },
+                content: [{ type: 'text/plain', value: message }],
+            }, {
+                headers: {
+                    'Authorization': 'Bearer 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',
+                    'Content-Type': 'application/json',
+                },
+            })
+            .then(function (response) {
+                console.log('Email sent successfully:', response.data);
+                alert('Your message has been sent successfully!');
+                // Optionally, clear the form fields after successful submission
+                event.target.reset();
+            })
+            .catch(function (error) {
+                console.error('Error sending email:', error.response.data);
+                alert('There was an error sending your message. Please try again later.');
+            });
+        });
+    </script>
+
+    
+    
+    
 
     <div class="container">
         <section class="gap"></section>
