@@ -450,6 +450,13 @@ h2 {
     color: orange;
   }
 
+  .aboutus__info p {
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+    color: #ddd;
+  }
+
   @media (width > 768px) {
   .aboutus__grid {
     margin-top: 200px;
