@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K's KalabasaFloat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Styles.css">
+
+</head>
+<body>
+        <header>
+            <img src="assets/Logo-white.jpg" alt="Kalabasa Float Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#home" onClick="toggleNav()">Home</a></li>
+                    <li><a href="#features" onClick="toggleNav()">Features</a></li>
+                    <li><a href="#products" onClick="toggleNav()">Products</a></li>
+                    <li><a href="#aboutus" onClick="toggleNav()">about</a></li>
+                    <li><a href="#contact" onClick="toggleNav()">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="cart-button" onClick="toggleCart()">
+                <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M7 4h-2l-3 7v2h3.5l1 2h13.5l2.5-6h-14l-.5-2h-3zm0-2h1l1 2h12.5l3.5 8-3 8h-13l-2-4h-3v-2l2-5-1-2zm2 17c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm9 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2z"/>
+                </svg>
+            </button>
+
+            <button class="toggle-nav-button" onClick="toggleNav()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="menu-icon" style="width: 24px; height: 24px; fill: currentColor;">
+                    <rect x="4" y="6" width="16" height="2" rx="1" ry="1"/>
+                    <rect x="4" y="11" width="16" height="2" rx="1" ry="1"/>
+                    <rect x="4" y="16" width="16" height="2" rx="1" ry="1"/>
+                </svg>
+            </button>
+            
+        </header>
+        
+        
+
+<div class="maindisplay" id="maindisplay">
+
+    <div class="container">
+        <section id="home">
+            <div class="home-content">
+                <div class="logo-title">
+                    <img src="assets/Logo.png" alt="Kalabasa Float Logo">
+                    <h1>K's KalabasaFloat</h1>
+                </div>
+                <p>Welcome to K's KalabasaFloat, your one-stop shop for delicious and refreshing kalabasa floats! Our handcrafted drinks are made with the finest ingredients to give you a delightful taste experience.</p>
+                <button onclick="scrollToFeatures()">Show All Products</button>
+                <script>
+                    function scrollToFeatures() {
+                      document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
+                    }
+                    </script>
+            </div>
+        </section>
+    </div>
+    
+    
+    <div class="container">
+        <section id="features" class="features">
+            <h1>Featured Products</h1>
+            <div class="product-highlights">
+                <div class="hproduct">
+                    <img src="assets/promo1.png" alt="Product Image">
+                    <h3>Product Name</h3>
+                    <p>buy 3 for less 12 ounce, original price is P75, but you can get is just by only P60. buy now for a sulit promo offer. this feature is limited time only.</p>
+                    <p><strong>Price:</strong> P60.00</p>
+                    <button onclick="addToCart(5)">Add to Cart</button>
+                </div>
+    
+                <div class="hproduct">
+                    <img src="assets/promo2.png" alt="Product Image">
+                    <h3>Product Name</h3>
+                    <p>buy 1 take 1 14 ounce, original price is P70, but you can get is just by only P60. buy now for a sulit promo offer. this feature is limited time only.</p>
+                    <p><strong>Price:</strong> P60.00</p>
+                    <button onclick="addToCart(6)">Add to Cart</button>
+                </div>
+    
+                <div class="hproduct">
+                    <img src="assets/20onuces.png" alt="Product Image">
+                    <h3>Product Name</h3>
+                    <p>20 ounce, the most sulit healthy coffee affordable just in K,s Kalabasafloat. buy now and feel the refreshing aura that comes with every sips</p>
+                    <p><strong>Price:</strong> P55.00</p>
+                    <button onclick="addToCart(4)">Add to Cart</button>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    
+    
+
+    <div class="container">
+        <section class="products" id="products">
+            <h1>Products</h1>
+            <div class="product-list" id="product-list">
+                
+            </div>
+        </section>
+    </div>
+
+    <div class="container">
+        <section class="aboutus" id="aboutus">
+            <div class="section__container aboutus__container">
+              <div class="aboutus__grid">
+                <div class="aboutus__image">
+                  <img src="assets/profile.png" alt="aboutus" />
+                </div>
+                <div class="aboutus__content">
+                  <div class="aboutus__card">
+                    <p>i' am</p>
+                    <h4>Esquivel, Mark Lexter</h4>
+                    <p class="poss" id="changingText"></p>
+                  </div>
+                  
+                  <div class="aboutus__card">
+                    <h4>mr. K</h4>
+                    <a href="#">K's Corporation</a>
+                  </div>
+                  <div class="aboutus__card">
+                    <p>Work hard?, work smart? No no no</p>
+                    <p>Let them work for you!</p>
+                  </div>
+                </div>
+              </div>
+          </section>
+    </div>
+
+    <div class="container">
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2>Reach Me</h2>
+                <p>If you have any questions, feel free to reach out. I'd love to hear from you!</p>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Bayanan II, Calapan City</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+63 969 143 2785</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>mrkesquivel17@gmail.com</span>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <div class="container">
+        <section class="gap"></section>
+    </div>
+            
+    <div class="container">
+        <div class="footer" id="footer">
+            <p>K's Kalabasa Float</p>
+            <div class="social">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+            
+
+    <div class="container" id="cartdiv">
+        <div class="cart" id="cart">
+
+            <div id="cartinside">
+                <h2 class="cartheader">My Cart</h2>
+                    <div id="cart-items"></div>
+                
+                <div class="btns" id="btns">
+                    <button onclick="clearCart()">Clear Cart</button>
+                    <button onclick="removeSelectedItems()">Remove selected</button>
+                    <button id="buynow" onclick="showPopup(), renderSelectedItems(),  toggleCart()">Buy Now</button>
+
+                </div>
+        </div>
+    </div>
+            
+    <div class="container">
+        <section class="popup" id="popup">
+            <div class="pop" id="pop">
+                <h2 class="thanks">Thank you for your orders</h2>
+                <h2 class="scanguid" style="display: none;">Please Proceed to counter to get your orders</h2>
+                <div class="display" id="display"></div>
+                <p class="guidinfo" style="display: block;">If done, Please proceed to counter to scan your order</p>
+                <div class="btn">
+                    <button id="popbtn1" onclick="generateQRCode()">Confirm</button>
+                    <button id="popbtn2" onclick="hidePopup()">Cancel</button>
+                </div>
+                <div class="QR" id="qr-container"></div>
+                <button id="qrclose" onclick="Closeqr(), clearCart(), hidePopup(), toggleCart()" style="display: none;">Done</button>
+            </div>
+        </section>        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator/qrcode.min.js"></script>   
+            <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</div>
+    <script src="Main.js"></script>
+</body>
+
+</html>
