@@ -937,7 +937,7 @@ td {
     }
     .logo-title {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         margin-bottom: 20px;
     }
@@ -949,7 +949,7 @@ td {
     }
     
     .logo-title h1 {
-        font-size: 24px;
+        font-size: 40px;
         margin: 0;
     }
 
