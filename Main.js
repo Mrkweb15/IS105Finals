@@ -353,7 +353,7 @@ function Closeqr() {
 /* about us text */
 
 const textElement = document.getElementById('changingText');
-const textArray = ['CHEF', 'MANAGER', 'PRODUCER', 'DESIGNER', 'FINANCER'];
+const textArray = ['CEO', 'CHEF', 'MANAGER', 'PRODUCER', 'DESIGNER', 'FINANCER'];
 let currentIndex = 0;
 
 function changeText() {
